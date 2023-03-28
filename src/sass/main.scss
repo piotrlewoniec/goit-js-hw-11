@@ -1,0 +1,9 @@
+/*
+ * Główny plik dla stylów.
+ * Wszystkie partials podłączamy tutaj.
+ */
+
+@use './utils/common';
+@use './utils/container';
+@use './components/galleryPixaBay';
+// @use './example';

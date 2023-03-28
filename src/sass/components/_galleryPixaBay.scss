@@ -1,0 +1,124 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+
+  &__holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 30px;
+    list-style: none;
+  }
+  &__items {
+    padding-top: 60px;
+  }
+  &__bar {
+    position: fixed;
+    // z-index: 999;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: blue;
+  }
+  &__loadMoreBtn {
+    padding-bottom: 30px;
+  }
+  &__pictureholder {
+    height: 180px;
+    width: 280px; //flex-basis: calc((100% - 20px) / 4);
+    // calc((100% - number_of_gaps_in_row * value_of_one_gap) / number_of_elements_in_row)
+  }
+  &__picture {
+    display: block;
+    height: 100%;
+    width: 100%;
+    // max-width: 100%;
+    object-fit: cover;
+  }
+}
+// .photo-card {
+//   width: 280px;
+// }
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 2px;
+  padding-left: 2px;
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.load-more {
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: blue;
+  cursor: pointer;
+}
+
+.search-form {
+  position: relative;
+  width: 400px;
+}
+
+.form {
+  &__input {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+  }
+  &__btnsrch {
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  &__btnsrch::before {
+    content: ' ';
+    display: block;
+    width: 16px;
+    height: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' %3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg enable-background='new 0 0 64 64' height='64px' id='Layer_1' version='1.1' viewBox='0 0 64 64' width='64px' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg%3E%3Ccircle cx='32' cy='25' fill='none' r='16' stroke='%234D4D4D' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2'/%3E%3Cline fill='none' stroke='%234D4D4D' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' x1='40.9' x2='38.8' y1='44.1' y2='39.5'/%3E%3Cline fill='none' stroke='%234D4D4D' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='4' x1='40.9' x2='46' y1='44.1' y2='55'/%3E%3Cpath d='M36.2 13.7 c2.7 1 4.9 2.9 6.3 5.3' fill='none' stroke='%234D4D4D' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10'/%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+// <div class="photo-card">
+
+//   <div class="info">
+//     <p class="info-item">
+//       <b>Likes ${likes}</b>
+//     </p>
+//     <p class="info-item">
+//       <b>Views ${views}</b>
+//     </p>
+//     <p class="info-item">
+//       <b>Comments ${comments}</b>
+//     </p>
+//     <p class="info-item">
+//       <b>Downloads ${downloads}</b>
